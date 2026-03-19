@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>MathSuite Buga</title>
+    <link rel="stylesheet" href="style.css">
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js')
+      .then(reg => console.log('Service Worker registrado', reg))
+      .catch(err => console.log('Error al registrar', err));
+  }
+</script>
+</head>
+<body>
+    <div id="app-container"> <header class="header-main"><strong>Suite Matemática Buga</strong></header>
+        <nav class="nav-grid">
+            <button onclick="cargar('potenciacion.html')">Potencias</button>
+            <button onclick="cargar('radicacion.html')">Raíces</button>
+            <button onclick="cargar('logaritmos.html')">Log</button>
+            <button onclick="cargar('mixto.html')">Mixto</button>
+        </nav>
+        <iframe id="miIframe" class="main-frame" src="bienvenida.html"></iframe>
+    </div> <script>
+        function cargar(url) { document.getElementById('miIframe').src = url; }
+    </script>
+</body>
+</html>

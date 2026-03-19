@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div class="container">
+        <h1>DESAFÍO MIXTO</h1>
+        <div class="math-box"><div id="exercise">\[ \text{Presiona "Nuevo Reto"} \]</div></div>
+        <button onclick="lanzarDesafio(bancoMixto)">Nuevo Reto</button>
+        <button onclick="alternarSolucion()">Ver Resolución</button>
+        <div id="solution-box" style="display:none;"><div id="steps"></div></div>
+    </div>
+    <script src="banco_datos.js"></script>
+    <script src="motor.js"></script>
+</body>
+</html>
